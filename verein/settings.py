@@ -78,6 +78,9 @@ LANGUAGE_CODE = 'de'
 
 SITE_ID = 1
 
+USE_TZ = True
+TIME_ZONE = 'Europe/Zurich'
+
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
@@ -167,8 +170,8 @@ ORGANISATION_BANK_CONNECTION = {"PC" : "-",
             "BIC" : "-",
             "NAME" : "-",
             "ESR" : ""}
-SHARE_PRICE = "0"
+ENABLE_SHARES = False
 
 INFO_EMAIL = "info@juntagrico.org"
-SERVER_URL = "www.verein.org"
+SERVER_URL = "www.juntagrico.org"
 STYLES = {'static': ['verein/css/customize.css']}
