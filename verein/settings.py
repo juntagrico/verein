@@ -171,6 +171,7 @@ ORGANISATION_BANK_CONNECTION = {"PC" : "-",
             "NAME" : "-",
             "ESR" : ""}
 ENABLE_SHARES = False
+BASE_FEE = "100"
 
 INFO_EMAIL = "info@juntagrico.org"
 SERVER_URL = "www.juntagrico.org"
