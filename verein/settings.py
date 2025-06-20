@@ -27,11 +27,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'verein',
     'juntagrico',
+    'fontawesomefree',
+    'import_export',
     'impersonate',
     'crispy_forms',
     'adminsortable2',
-    'verein',
     'polymorphic',
 ]
 
@@ -134,13 +136,20 @@ if DEBUG is True:
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage",
+    },
+}
 
 IMPERSONATE = {
     'REDIRECT_URL': '/my/profile',
 }
 
-LOGIN_REDIRECT_URL = "/my/home"
+LOGIN_REDIRECT_URL = "/"
 
 """
     File & Storage Settings
@@ -172,6 +181,13 @@ ORGANISATION_BANK_CONNECTION = {"PC" : "-",
             "ESR" : ""}
 ENABLE_SHARES = False
 
-INFO_EMAIL = "info@juntagrico.org"
-SERVER_URL = "www.juntagrico.org"
+CONTACTS = {
+    "general": "info@juntagrico.org"
+}
+ORGANISATION_WEBSITE = {
+    'name': "www.juntagrico.org",
+    'url': "https://www.juntagrico.org"
+}
 STYLES = {'static': ['verein/css/customize.css']}
+
+IMPORT_EXPORT_EXPORT_PERMISSION_CODE = 'view'
