@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('JUNTAGRICO_SECRET_KEY')
 
 DEBUG = os.environ.get("JUNTAGRICO_DEBUG", 'False')=='True'
 
-ALLOWED_HOSTS = ['verein.juntagrico.science', 'localhost',]
+ALLOWED_HOSTS = ['verein.juntagrico.science', 'localhost', 'verein-staging.juntagrico.science']
 
 
 # Application definition
